@@ -9,11 +9,12 @@ app.get('/', (req, res) => {
   res.status(200).send('Welcome to Lab 1: Node.js and Express server');
 });
 
-// GET /about -> JSON with name and section
+// GET /about -> JSON with name, registration number, and section
 app.get('/about', (req, res) => {
   res.status(200).json({
-    name: 'Shaik Suheal',
-    section: 'CSE-GEN-AI 2C 112'
+    name: 'B. Navadeep',
+    registrationNumber: '252U1R9017',
+    section: 'CSE-GEN-AI 2A 304'
   });
 });
 

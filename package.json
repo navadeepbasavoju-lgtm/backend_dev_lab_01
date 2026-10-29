@@ -8,7 +8,7 @@
     "start:http": "node server-http.js"
   },
   "keywords": ["nodejs", "express", "backend"],
-  "author": "Shaik Suheal",
+  "author": "B. Navadeep",
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.2"
