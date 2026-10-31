@@ -141,5 +141,5 @@ POST creates a new resource (the server picks the id). PUT replaces or updates a
 ## Notes: Problems Faced and Solutions
 
 - The SQLite command-line tool was not installed on my computer, so I viewed `books.db` with DB Browser for SQLite instead.
-- Write your own notes here. For example, describe an error you hit while testing in Postman or deploying, and how you fixed it.
+- **Render Deployment GLIBC mismatch:** Render's Linux environment provides an older GLIBC version than the prebuilt `sqlite3` binary expects (`version 'GLIBC_2.38' not found`). This was resolved by updating the Render build command to rebuild from source (`npm install && npm run build` or `npm rebuild sqlite3 --build-from-source`) against Render's system libraries.
 - The free hosting plan used for deployment may reset the file system on restart, so changes made through POST, PUT and DELETE on the live link can disappear after a redeploy. The local `books.db` file keeps changes.
